@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Uv_Eats</string>
+    <string name="Label_User">Usuario</string>
+    <string name="Label_Password">Contraseña</string>
+    <string name="Button_Login">Iniciar Sesión</string>
+    <string name="Sign_In">Registrarse</string>
+    <string name="Recover_Password">Recuperar Contraseña</string>
+    <string name="InstructionsEmail">Ingrese su correo</string>
+    <string name="SendCode">Enviar correo </string>
+    <string name="InstructionsCode">Ingrese el codigo de validación</string>
+    <string name="ValidateCode">Validar código</string>
+    <string name="newPassword">Ingresa la nueva contraseña</string>
+    <string name="RepeatPassword">Confirmar contraseña</string>
+    <string name="SavePassword">Guardar contraseña</string>
+    <string name="Products">Productos</string>
+    <string name="Cart">Carrito</string>
+    <string name="Record">Historial</string>
+    <string name="Name">Nombre Completo</string>
+    <string name="Email">Correo electrónico</string>
+    <string name="Return">Regresar</string>
+</resources>
