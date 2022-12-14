@@ -3,10 +3,11 @@
     <string name="Label_User">Usuario</string>
     <string name="Label_Password">Contraseña</string>
     <string name="Button_Login">Iniciar Sesión</string>
-    <string name="Sign_In">Registrarse</string>
+    <string name="User_Register">Registrar Usuario</string>
     <string name="Recover_Password">Recuperar Contraseña</string>
     <string name="InstructionsEmail">Ingrese su correo</string>
     <string name="SendCode">Enviar correo </string>
+    <string name="Sign_In">Registrarse</string>
     <string name="InstructionsCode">Ingrese el codigo de validación</string>
     <string name="ValidateCode">Validar código</string>
     <string name="newPassword">Ingresa la nueva contraseña</string>
@@ -18,4 +19,21 @@
     <string name="Name">Nombre Completo</string>
     <string name="Email">Correo electrónico</string>
     <string name="Return">Regresar</string>
+    <string name="TitleEmployee">Opciones de empleado</string>
+    <string name="Product_Register">Registrar Producto</string>
+    <string name="Category_Register">Registrar Categoria</string>
+    <string name="Menu_Register">Registrar Menu</string>
+    <string name="Edit_Product">Editar Producto</string>
+    <string name="Edit_Category">Editar Categoria</string>
+    <string name="Edit_Menu">Editar Menu</string>
+    <string name="Consult_Products">Consultar Productos</string>
+    <string name="Consult_Categories">Consultar Categorias</string>
+    <string name="Consult_Menus">Consultar Menus</string>
+    <string name="Category_Name">Nombre Categoria</string>
+    <string name="Image">Imagen</string>
+    <string name="Register">Registrar</string>
+    <string name="NameData">Nombre</string>
+    <string name="Description">Descripción</string>
+    <string name="Price">Precio</string>
+    <string name="Select_Category">Seleccionar Categoria</string>
 </resources>

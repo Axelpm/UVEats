@@ -26,28 +26,11 @@ public class MainActivity extends AppCompatActivity {
             startPrincipalTab();
         });
 
-        binding.ButtonRecoverPassword.setOnClickListener(v ->{
-            startRecoverPassword();
-        });
 
-        binding.ButtonSignIn.setOnClickListener(v ->{
-            startSignIn();
-        });
-    }
-
-
-    private void startRecoverPassword(){
-        Intent intent = new Intent(this, RecoverPassword.class);
-        startActivity(intent);
-    }
-
-    private void startSignIn(){
-        Intent intent = new Intent(this, SignIn.class);
-        startActivity(intent);
     }
 
     private void startPrincipalTab(){
-        Intent intent = new Intent(this, PrincipalTabMenuActivity.class);
+        Intent intent = new Intent(this, EmployeeOptions.class);
         startActivity(intent);
     }
 }
