@@ -72,29 +72,6 @@
             android:textColor="@color/white"
             android:background="@color/Blue"
             />
-        <Button
-            android:id="@+id/ButtonSignIn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/Sign_In"
-            android:gravity="center_horizontal"
-            android:background="@color/Blue"
-            android:textColor="@color/white"
-            android:padding="10dp"
-            />
-
-        <Button
-            android:id="@+id/ButtonRecoverPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="125dp"
-            android:gravity="center_horizontal"
-            android:text="@string/Recover_Password"
-            android:background="@color/white"
-            android:textColor="@color/Blue"
-            android:padding="10dp"
-            />
 
     </LinearLayout>
 

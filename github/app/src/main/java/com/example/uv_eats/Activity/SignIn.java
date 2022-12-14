@@ -17,15 +17,15 @@ public class SignIn extends AppCompatActivity {
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.ButtonRegister.setOnClickListener(v -> {
-            startLogin();
+            returnEmployeeOptions();
         });
         binding.ButtonReturn.setOnClickListener(v -> {
-            startLogin();
+            returnEmployeeOptions();
         });
     }
 
-    private void startLogin(){
-        Intent intent = new Intent(this, MainActivity.class);
+    private void returnEmployeeOptions(){
+        Intent intent = new Intent(this, EmployeeOptions.class);
         startActivity(intent);
     }
 }

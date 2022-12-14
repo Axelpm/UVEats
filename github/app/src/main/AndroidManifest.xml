@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.uv_eats">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,14 +16,28 @@
         android:theme="@style/Theme.Uv_Eats"
         tools:targetApi="31">
         <activity
-            android:name="com.example.uv_eats.Activity.SignIn"
+            android:name="com.example.uv_eats.Activity.ProductRegister"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.uv_eats.Activity.RecoverPassword"
+            android:name="com.example.uv_eats.Activity.CategoryRegister"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.uv_eats.Activity.EmployeeOptions"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.uv_eats.Activity.SignIn"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
