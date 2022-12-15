@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/Product_Register"
+                android:text="@string/Edit_Product"
                 android:textSize="30dp"
                 android:gravity="center"
                 />
@@ -106,7 +106,7 @@
                 android:id="@+id/ButtonRegisterProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Register"
+                android:text="@string/Edit"
                 android:layout_marginTop="20dp"
                 />
         </LinearLayout>

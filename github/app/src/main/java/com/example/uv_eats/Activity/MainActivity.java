@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startPrincipalTab(){
-        Intent intent = new Intent(this, EmployeeOptions.class);
+        Intent intent = new Intent(this, PrincipalTabMenuActivity.class);
         startActivity(intent);
     }
 }

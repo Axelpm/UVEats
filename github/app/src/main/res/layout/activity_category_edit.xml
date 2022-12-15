@@ -24,7 +24,7 @@
                 android:id="@+id/TitleCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Category_Register"
+                android:text="@string/Edit_Category"
                 android:textSize="30dp"
                 android:gravity="center"
                 />
@@ -65,10 +65,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/Register"
+                android:text="@string/Edit"
                 />
         </LinearLayout>
 
 
     </RelativeLayout>
+
 </layout>
