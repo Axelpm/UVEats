@@ -7,20 +7,18 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.widget.ArrayAdapter;
 
+import com.example.uv_eats.databinding.ActivityProductEditBinding;
 
-import com.example.uv_eats.databinding.ActivityProductRegisterBinding;
+public class ProductEdit extends AppCompatActivity {
 
-public class ProductRegister extends AppCompatActivity {
-
-    private ActivityProductRegisterBinding binding;
+    private ActivityProductEditBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityProductRegisterBinding.inflate(getLayoutInflater());
-
+        binding = ActivityProductEditBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         binding.ImageProduct.setOnClickListener(v ->{
             chargeImage();
         });

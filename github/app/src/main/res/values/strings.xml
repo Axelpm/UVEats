@@ -36,4 +36,5 @@
     <string name="Description">Descripción</string>
     <string name="Price">Precio</string>
     <string name="Select_Category">Seleccionar Categoria</string>
+    <string name="Edit">Editar</string>
 </resources>

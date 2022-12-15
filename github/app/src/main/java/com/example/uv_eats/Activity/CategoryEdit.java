@@ -7,29 +7,25 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.widget.ArrayAdapter;
 
+import com.example.uv_eats.databinding.ActivityCategoryEditBinding;
 
-import com.example.uv_eats.databinding.ActivityProductRegisterBinding;
+public class CategoryEdit extends AppCompatActivity {
 
-public class ProductRegister extends AppCompatActivity {
-
-    private ActivityProductRegisterBinding binding;
+    private ActivityCategoryEditBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityProductRegisterBinding.inflate(getLayoutInflater());
-
-        binding.ImageProduct.setOnClickListener(v ->{
+        binding = ActivityCategoryEditBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.ImageCategory.setOnClickListener(v ->{
             chargeImage();
         });
-        binding.ButtonRegisterProduct.setOnClickListener(v ->{
+        binding.ButtonRegister.setOnClickListener(v ->{
             startActivityEmployeeOptions();
         });
-
     }
-
     private void startActivityEmployeeOptions() {
         Intent intent = new Intent(this, EmployeeOptions.class);
         startActivity(intent);
@@ -46,7 +42,7 @@ public class ProductRegister extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK){
             Uri Path= data.getData();
-            binding.ImageProduct.setImageURI(Path);
+            binding.ImageCategory.setImageURI(Path);
         }
     }
 }

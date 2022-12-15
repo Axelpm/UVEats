@@ -1,5 +1,6 @@
 package com.example.uv_eats.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,15 @@ public class PrincipalTabMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPrincipalTabMenuActivityBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.OptionsImage.setOnClickListener(v ->{
+            startEmployeeOptions();
+        });
+
+        binding.ExitImage.setOnClickListener(v ->{
+            startLogin();
+        });
+
         tabLayout = binding.tabLayout;
         viewPager = binding.viewPager;
         tabProduct = binding.tabProducts;
@@ -60,4 +70,15 @@ public class PrincipalTabMenuActivity extends AppCompatActivity {
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
+
+    private void startLogin() {
+        Intent intent =  new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    private void startEmployeeOptions() {
+        Intent intent = new Intent(this, EmployeeOptions.class);
+        startActivity(intent);
+    }
+
 }
