@@ -27,19 +27,35 @@
                 android:src="@drawable/icon_options" />
 
             <ImageView
+                android:id="@+id/UserImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_user"
+                android:layout_marginStart="10dp"
+                />
+
+            <ImageView
                 android:id="@+id/ExitImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="310dp"
+                android:layout_marginStart="250dp"
                 android:src="@drawable/icon_exit"
                 />
         </LinearLayout>
+
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Blue">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Menu"
+                android:icon="@drawable/icon_menu"/>
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabProducts"

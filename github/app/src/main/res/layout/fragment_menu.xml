@@ -9,28 +9,29 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Activity.Controller.Record">
-
+        tools:context=".Activity.Controller.Menu">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textSize="30dp"
-                android:text="@string/My_Orders"
-                android:layout_gravity="center"/>
+                android:paddingTop="16dp"
+                android:text="@string/Menu_Day"
+                android:textSize="25dp"
+                android:gravity="center"
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/eq_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:itemCount="2"
-                tools:listitem="@layout/record_item"/>
+                tools:itemCount="5"
+                tools:listitem="@layout/menu_item"/>
+
 
         </LinearLayout>
 
