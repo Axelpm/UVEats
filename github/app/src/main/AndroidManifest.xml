@@ -16,6 +16,13 @@
         android:theme="@style/Theme.Uv_Eats"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.UserOptions"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity.ConsultOrders"
             android:exported="false">
             <meta-data

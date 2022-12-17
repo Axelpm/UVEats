@@ -53,4 +53,5 @@
     <string name="Delete">Eliminar</string>
     <string name="Consult_Orders">Consultar Pedidos</string>
     <string name="Reply">Contestar</string>
+    <string name="User_Options">Opciones de Usuario</string>
 </resources>

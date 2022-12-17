@@ -33,6 +33,10 @@ public class PrincipalTabMenuActivity extends AppCompatActivity {
             startLogin();
         });
 
+        binding.UserImage.setOnClickListener(v ->{
+            startUserOptions();
+        });
+
         tabLayout = binding.tabLayout;
         viewPager = binding.viewPager;
         tabProduct = binding.tabProducts;
@@ -69,6 +73,11 @@ public class PrincipalTabMenuActivity extends AppCompatActivity {
         });
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+    }
+
+    private void startUserOptions() {
+        Intent intent =  new Intent(this, UserOptions.class);
+        startActivity(intent);
     }
 
     private void startLogin() {
