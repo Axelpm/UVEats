@@ -19,10 +19,12 @@ public class PagerController extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new Products();
+                return new Menu();
             case 1:
-                return new Cart();
+                return new Products();
             case 2:
+                return new Cart();
+            case 3:
                 return new Record();
             default:
                 return null;

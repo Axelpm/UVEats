@@ -2,11 +2,14 @@ package com.example.uv_eats.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import com.example.uv_eats.databinding.ActivityMainBinding;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
     private void startPrincipalTab(){
         Intent intent = new Intent(this, PrincipalTabMenuActivity.class);

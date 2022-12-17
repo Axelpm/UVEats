@@ -35,6 +35,33 @@ public class EmployeeOptions extends AppCompatActivity {
         binding.ButtonEditCategory.setOnClickListener(v ->{
             startEditCategory();
         });
+
+        binding.ButtonConsultCategories.setOnClickListener(v ->{
+            startConsultCategories();
+        });
+
+        binding.ButtonConsultMenus.setOnClickListener(v ->{
+            startConsultMenus();
+        });
+
+        binding.ButtonConsultProducts.setOnClickListener(v ->{
+            startConsultProducts();
+        });
+    }
+
+    private void startConsultProducts() {
+        Intent intent = new Intent(this, ConsultProducts.class);
+        startActivity(intent);
+    }
+
+    private void startConsultMenus() {
+        Intent intent = new Intent(this, ConsultMenus.class);
+        startActivity(intent);
+    }
+
+    private void startConsultCategories() {
+        Intent intent = new Intent(this, ConsultCategories.class);
+        startActivity(intent);
     }
 
     private void startEditCategory() {

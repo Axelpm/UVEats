@@ -20,6 +20,7 @@ public class ProductRegister extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityProductRegisterBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         binding.ImageProduct.setOnClickListener(v ->{
             chargeImage();
