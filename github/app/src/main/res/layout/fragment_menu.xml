@@ -16,14 +16,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
+
             <TextView
+                android:id="@+id/titleMenuText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/Menu_Day"
-                android:textSize="25dp"
-                android:gravity="center"
-                />
+                android:textSize="25dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/eq_recycler"

@@ -57,6 +57,7 @@ public class PrincipalTabMenuActivity extends AppCompatActivity {
         });
 
         tabLayout = binding.tabLayout;
+
         viewPager = binding.viewPager;
         tabProduct = binding.tabProducts;
         tabCart = binding.tabCart;

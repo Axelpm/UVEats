@@ -3,6 +3,7 @@ package com.example.uv_eats.Activity.Controller;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 
 import com.example.uv_eats.Activity.POCO.Auth;
 import com.example.uv_eats.R;
+import com.example.uv_eats.databinding.ActivityPrincipalTabMenuActivityBinding;
+import com.example.uv_eats.databinding.FragmentMenuBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +30,9 @@ public class Menu extends Fragment {
     private String mParam1;
     private String mParam2;
     private Auth autenticacionRecibida;
+    private FragmentMenuBinding binding;
+    private RecyclerView recyclerViewMenu;
+    private RecyclerViewAdaptador adaptador;
     public Menu() {
         // Required empty public constructor
     }
@@ -53,14 +59,20 @@ public class Menu extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        binding = FragmentMenuBinding.inflate(getLayoutInflater());
 
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        cargarProductos();
 
+    }
 
+    private void cargarProductos() {
+
+        //binding.eqRecycler.add(newInstance("prueba","prueba"));
     }
 
     @Override
