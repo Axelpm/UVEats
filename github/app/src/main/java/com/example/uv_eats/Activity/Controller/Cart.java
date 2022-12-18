@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.uv_eats.Activity.POCO.Auth;
 import com.example.uv_eats.R;
 
 /**
@@ -25,11 +26,14 @@ public class Cart extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Auth autenticacionRecibida;
 
     public Cart() {
         // Required empty public constructor
     }
-
+    public Cart(Auth autenticacion) {
+        this.autenticacionRecibida=autenticacion;
+    }
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.

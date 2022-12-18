@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.uv_eats.Activity.POCO.Auth;
 import com.example.uv_eats.R;
 
 /**
@@ -24,11 +25,13 @@ public class Record extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private Auth autenticacionRecibida;
     public Record() {
         // Required empty public constructor
     }
-
+    public Record(Auth autenticacion) {
+        this.autenticacionRecibida=autenticacion;
+    }
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.

@@ -5,13 +5,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.uv_eats.Activity.POCO.Auth;
+
 
 public class PagerController extends FragmentPagerAdapter {
     int numOfTabs;
-
-    public PagerController(@NonNull FragmentManager fm, int behavior) {
+    Auth autenticacionRecibida;
+    public PagerController(@NonNull FragmentManager fm, int behavior, Auth autenticacion) {
         super(fm, behavior);
         this.numOfTabs = behavior;
+        this.autenticacionRecibida=autenticacion;
     }
 
     @NonNull
@@ -19,13 +22,13 @@ public class PagerController extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new Menu();
+                return new Menu(autenticacionRecibida);
             case 1:
-                return new Products();
+                return new Products(autenticacionRecibida);
             case 2:
-                return new Cart();
+                return new Cart(autenticacionRecibida);
             case 3:
-                return new Record();
+                return new Record(autenticacionRecibida);
             default:
                 return null;
         }

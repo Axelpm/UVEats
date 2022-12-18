@@ -1,18 +1,22 @@
 package com.example.uv_eats.Activity;
 
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.uv_eats.Activity.Controller.PagerController;
+import com.example.uv_eats.Activity.POCO.Auth;
 import com.example.uv_eats.databinding.ActivityPrincipalTabMenuActivityBinding;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 public class PrincipalTabMenuActivity extends AppCompatActivity {
-
+    String tipoUsuario="";
+    public Auth autenticacion;
     private ActivityPrincipalTabMenuActivityBinding binding;
     TabLayout tabLayout;
     ViewPager viewPager;
@@ -24,16 +28,31 @@ public class PrincipalTabMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPrincipalTabMenuActivityBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        System.out.println("A1");
+
+        Bundle objetoRecibido=getIntent().getExtras();
+        autenticacion= (Auth) objetoRecibido.getSerializable("Auth");
+
+        Bundle objeto2Recibido=getIntent().getExtras();
+        tipoUsuario=(String) objeto2Recibido.getSerializable("tipo");
+
 
         binding.OptionsImage.setOnClickListener(v ->{
             startEmployeeOptions();
+
         });
 
         binding.ExitImage.setOnClickListener(v ->{
             startLogin();
         });
+        System.out.println(tipoUsuario);
+        if(tipoUsuario.equals("ESTUDIANTE")){
+            System.out.println("A");
+            binding.OptionsImage.setVisibility(View.GONE);
+        }
 
         binding.UserImage.setOnClickListener(v ->{
+
             startUserOptions();
         });
 
@@ -43,7 +62,7 @@ public class PrincipalTabMenuActivity extends AppCompatActivity {
         tabCart = binding.tabCart;
         tabRecord = binding.tabRecord;
 
-        pagerAdapter = new PagerController(getSupportFragmentManager(), tabLayout.getTabCount());
+        pagerAdapter = new PagerController(getSupportFragmentManager(), tabLayout.getTabCount(),autenticacion);
         viewPager.setAdapter(pagerAdapter);
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -51,7 +70,10 @@ public class PrincipalTabMenuActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
                 if(tab.getPosition() == 0){
+
                     pagerAdapter.notifyDataSetChanged();
+
+
                 }
                 if(tab.getPosition() == 1){
                     pagerAdapter.notifyDataSetChanged();

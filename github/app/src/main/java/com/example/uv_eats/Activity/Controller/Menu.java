@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.uv_eats.Activity.POCO.Auth;
 import com.example.uv_eats.R;
 
 /**
@@ -25,11 +26,13 @@ public class Menu extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private Auth autenticacionRecibida;
     public Menu() {
         // Required empty public constructor
     }
-
+    public Menu(Auth autenticacion) {
+       this.autenticacionRecibida=autenticacion;
+    }
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -50,11 +53,14 @@ public class Menu extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
@@ -62,5 +68,6 @@ public class Menu extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu, container, false);
+
     }
 }
